@@ -1,0 +1,13 @@
+runtime: nodejs20
+
+handlers:
+  - url: /api/.*
+    script: auto
+
+  - url: /(.*\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))$
+    static_files: dist/\1
+    upload: dist/.*\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$
+
+  - url: /.*
+    static_files: dist/index.html
+    upload: dist/index.html

@@ -1,0 +1,128 @@
+/* Modal styling */
+.modal-dialog.modal-lg {
+  max-width: 800px;
+}
+
+.modal-content {
+  border-radius: 0;
+  border: none;
+}
+
+/* Header styling */
+.modal-header {
+  border-bottom: 1px solid #dee2e6;
+  padding: 0.25rem 0.1rem;
+  background-color: white;
+}
+
+.artwork-title-section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .artwork-thumbnail {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    //margin-right: 1rem;
+  }
+
+  .artwork-info {
+    h5 {
+      font-size: 0.7rem;
+      margin-bottom: 0.1rem;
+      font-weight: 500;
+      
+    }
+
+    p {
+      //margin-bottom: 0;
+      color: #6c757d;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+/* Modal body styling */
+.modal-body {
+  padding: 1rem;
+}
+
+.categories-content {
+  /* Remove minimum height to reduce gaps */
+}
+
+/* Row and column adjustments */
+.row.g-4 {
+  /* Reduce row gap */
+  --bs-gutter-x: 0.75rem;
+  --bs-gutter-y: 0.75rem;
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+}
+
+.row.g-4 > * {
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding-top: calc(var(--bs-gutter-y) * 0.5);
+  padding-bottom: calc(var(--bs-gutter-y) * 0.5);
+}
+
+/* Category card styling */
+.category-card {
+  height: 100%;
+  border-radius: 0;
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  overflow: hidden;
+  box-shadow: none;
+  margin-bottom: 0;
+  
+  // &:hover {
+  //   transform: translateY(-3px);
+  //   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  // }
+
+  .category-image-container {
+    height: 180px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .category-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .category-name {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    font-weight: normal;
+    color: #343a40;
+    text-align: center;
+  }
+}
+
+/* Modal z-index to ensure it appears on top */
+.modal {
+  z-index: 1050 !important;
+}
+
+.modal-backdrop {
+  z-index: 1040 !important;
+}
+
+/* Close button positioning */
+.modal-header .btn-close {
+  margin: 0;
+  padding: 0.9rem;
+}

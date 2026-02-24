@@ -1,0 +1,47 @@
+// src/components/ArtistInfo.scss
+.artist-info {
+  .artist-name {
+    font-size: 1.3rem; // Original font size
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .artist-meta {
+    color: #6c757d;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.8rem; // Original font size
+  }
+  
+  .artist-biography {
+    line-height: 1.4;
+    font-size: 0.8rem; // Original font size
+    
+    p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+  }
+  
+  // Responsive mobile styles
+  @media (max-width: 768px) {
+    .artist-name {
+      font-size: 1.3rem;
+    }
+    
+    .artist-meta {
+      font-size: 0.8rem;
+    }
+    
+    .artist-biography {
+      font-size: 0.8rem;
+      line-height: 1.4;
+      
+      p {
+        text-align: left; // Better readability on mobile
+      }
+    }
+  }
+}

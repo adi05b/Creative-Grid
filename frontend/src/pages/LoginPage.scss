@@ -1,0 +1,74 @@
+@import 'bootstrap/scss/bootstrap';
+
+.login-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  
+  .card-body {
+    padding: 2rem;
+  }
+  
+  h2 {
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-control {
+    padding: 0.6rem 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    
+    &:focus {
+      border-color: #86b7fe;
+      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    }
+  }
+  
+  .text-danger {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    color: #dc3545;
+  }
+  
+  .login-button {
+    background-color: #6c88a5;
+    border-color: #6c88a5;
+    padding: 0.7rem 1rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    
+    &:hover, &:focus {
+      background-color: #205375;
+      border-color: #205375;
+    }
+    
+    &:disabled {
+      background-color: #a7b7c7;
+      border-color: #a7b7c7;
+    }
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .login-card {
+    .card-body {
+      padding: 1.5rem;
+    }
+  }
+}

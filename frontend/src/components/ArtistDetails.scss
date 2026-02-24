@@ -1,0 +1,86 @@
+// src/components/ArtistDetails.scss
+.artist-details {
+  margin-top: 20px;
+  width: 100%;
+  
+  // Match width to search results width
+  .nav.artist-tabs {
+    display: flex;
+    margin-bottom: 0;
+    border-bottom: none;
+    width: 100%;
+    max-width: 930px; // Width that matches search results
+    margin-left: auto;
+    margin-right: auto;
+
+    
+    .nav-item {
+      flex: 1;
+      
+      .nav-link {
+        text-align: center;
+        padding: 0.35rem 1.5rem;
+        border: none;
+        color: #495057;
+        background-color: #FFFFFF; // White for inactive tabs
+        transition: background-color 0.3s ease;
+        border-radius: 0.25rem; // Rounded corners on all sides
+        margin-right: 2px; // Small gap between tabs
+        font-size: 0.9rem; // Original font size
+        
+        &.active {
+          background-color: #1a4b8c !important; // Blue for active tab
+          color: white;
+          border: none;
+        }
+      }
+    }
+  }
+  
+  .tab-content {
+    //padding: 10px;
+    border: none; // Remove the border
+    max-width: 930px; // Exact same width as tabs
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem; // Original font size
+  }
+  
+  .artist-details-loading {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    border: none; // Remove the border
+    max-width: 950px; // Match the width
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .artist-details-error {
+    margin: 20px 0;
+    max-width: 950px; // Match the width
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  // Responsive mobile styles
+  @media (max-width: 768px) {
+    .nav.artist-tabs {
+      max-width: 100%;
+      padding: 0 10px;
+      
+      .nav-item {
+        .nav-link {
+          padding: 0.5rem 0.75rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+    
+    .tab-content {
+      padding: 15px;
+      max-width: 100%;
+      font-size: 0.9rem;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+// frontend/src/pages/FavoritesPage.scss
+.favorites-page {
+    padding: 20px;
+    min-height: calc(100vh - 130px); // Accounting for header and footer
+    
+    .favorites-page-loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+    }
+    
+    .alert {
+      margin-top: 20px;
+    }
+    
+    .favorites-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    
+    // Responsive adjustments
+    @media (max-width: 768px) {
+      .favorites-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .favorites-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
